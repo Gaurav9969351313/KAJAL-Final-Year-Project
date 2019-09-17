@@ -1,0 +1,81 @@
+<div style="margin-top:20px;" class="animated fadeIn">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          User Management
+        </div>
+        <div class="card-body">
+          <p-dialog header="App Config Details" [(visible)]="displayDialogForUserConfig" [responsive]="true" showEffect="fade" [modal]="true"
+          [closable]="true" [width]="700">
+          <div class="ui-g ui-fluid" *ngIf="selectedUserConfigRow">
+        
+            <div class="ui-g-2">
+              <label for="Key">User Name</label>
+            </div>
+            <div class="ui-g-10">
+              <input  pInputText pTooltip="Enter your username" tooltipPosition="bottom" id="key" [(ngModel)]="selectedUserConfigRow.username" />
+            </div>
+        
+            <div class="ui-g-2">
+              <label for="Value">Password</label>
+            </div>
+            <div class="ui-g-10">
+              <input pTooltip="Enter your username" tooltipPosition="bottom" pInputText id="value" [(ngModel)]="selectedUserConfigRow.password" />
+            </div>
+        
+            <div class="ui-g-2">
+              <label for="Value">Role</label>
+            </div>
+            <div class="ui-g-10">
+              <input pTooltip="Enter your username" tooltipPosition="bottom" pInputText id="value" [(ngModel)]="selectedUserConfigRow.role" />
+            </div>
+        
+          </div>
+          <p-footer>
+            <div class="ui-dialog-buttonpane ui-helper-clearfix">
+        
+              <div *ngIf="role=='user'">
+                <button type="button" pButton icon="pi pi-times" (click)="UserConfigCancel()" label="Cancel"></button>
+              </div>
+        
+              <div *ngIf="role=='admin'">
+                <button type="button" pButton icon="pi pi-times" (click)="UserConfigCancel()" label="Cancel"></button>
+                <button type="button" pButton icon="pi pi-times" (click)="UserConfigDelete()" label="Delete"></button>
+                <button type="button" pButton icon="pi pi-check" (click)="UserConfigSave()" label="Save"></button>
+              </div>
+        
+            </div>
+          </p-footer>
+        </p-dialog>
+        
+        
+        <p-table [columns]="UserConfigCols" [value]="UserConfigRows" selectionMode="single" [(selection)]="selectedUserConfigRow" (onRowSelect)="onRowSelectUserConfig($event)"
+        [paginator]="true" rows="10">
+          <ng-template pTemplate="header" let-columns>
+            <tr>
+              <th *ngFor="let col of columns">
+                {{col.header}}
+              </th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr [pSelectableRow]="rowData">
+              <td *ngFor="let col of columns">
+                {{rowData[col.field]}}
+              </td>
+            </tr>
+          </ng-template>
+        
+          <ng-template pTemplate="summary" let-rowData>
+            <div style="text-align:left">
+              <button type="button" pButton icon="pi pi-plus" (click)="showDialogToAddUserConfig()" label="Add"></button>
+            </div>
+          </ng-template>
+        </p-table>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

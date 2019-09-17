@@ -1,0 +1,8 @@
+{
+  "serviceUrl": "https://localhost:7443",
+  "singleConfiguratorUrl":"http://qsdev.mahindra.com/single/?appid=d2d69372-0872-4319-ab68-e2784c2db879&obj=",
+  "AES_KEY":"M@h1ndra$1234567",
+  "AES_IV":"0001000100010001",
+  "updateModelUrl": "https://localhost:7005/admin",
+  "nlpServiceUrl":"https://localhost:7005"
+}

@@ -1,0 +1,127 @@
+<div class="animated fadeIn">
+  <div class="card-columns cols-2">
+    <div class="card">
+      <div class="card-header">
+        Line Chart
+        <div class="card-header-actions">
+          <a href="http://www.chartjs.org">
+            <small class="text-muted">docs</small>
+          </a>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="chart-wrapper">
+       
+
+          <p-accordion>  
+            <p-accordionTab header="India">  
+              <p-orderList [value]="Indiastate">  
+                <ng-template let-state pTemplate="item">  
+                  <div class="ui-helper-clearfix">  
+                    <div style="font-size:16px;float:left;margin:5px">{{state}}</div>  
+                  </div>  
+                </ng-template>  
+              </p-orderList>  
+            </p-accordionTab>  
+            <p-accordionTab header="Australia">  
+              <p-orderList [value]="Ausstate">  
+                <ng-template let-Ausstate pTemplate="item">  
+                  <div class="ui-helper-clearfix">  
+                    <div style="font-size:16px;float:left;margin:5px">{{Ausstate}}</div>  
+                  </div>  
+                </ng-template>  
+              </p-orderList>  
+            </p-accordionTab>  
+            <p-accordionTab header="SriLanka">  
+              <p-orderList [value]="Slstate">  
+                <ng-template let-Slstate pTemplate="item">  
+                  <div class="ui-helper-clearfix">  
+                    <div style="font-size:16px;float:center;margin:5px">{{Slstate}}</div>  
+                  </div>  
+                </ng-template>  
+              </p-orderList>  
+            
+            </p-accordionTab>  
+          </p-accordion>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        Bar Chart
+        <div class="card-header-actions">
+          <a href="http://www.chartjs.org">
+            <small class="text-muted">docs</small>
+          </a>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="chart-wrapper">
+     
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        Doughnut Chart
+        <div class="card-header-actions">
+          <a href="http://www.chartjs.org">
+            <small class="text-muted">docs</small>
+          </a>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="chart-wrapper">
+       
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        Radar Chart
+        <div class="card-header-actions">
+          <a href="http://www.chartjs.org">
+            <small class="text-muted">docs</small>
+          </a>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="chart-wrapper">
+       
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        Pie Chart
+        <div class="card-header-actions">
+          <a href="http://www.chartjs.org">
+            <small class="text-muted">docs</small>
+          </a>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="chart-wrapper">
+     
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        Polar Area Chart
+        <div class="card-header-actions">
+          <a href="http://www.chartjs.org">
+            <small class="text-muted">docs</small>
+          </a>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="chart-wrapper">
+       
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
